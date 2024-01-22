@@ -29,7 +29,6 @@ function crearForo() {
         <p>Cabeza: ${cabeza}</p>
         <p>Tags: ${tags.join(', ')}</p>
         <p>Plataforma: ${plataforma}</p>
-        <button onclick="borrarForo(this)">Borrar</button>
     `;
 
     document.getElementById("foros").appendChild(nuevoForo);
@@ -81,7 +80,6 @@ function cargarForosDesdeCookies() {
                 <p>Cabeza: ${foro.cabeza}</p>
                 <p>Tags: ${foro.tags.join(', ')}</p>
                 <p>Plataforma: ${foro.plataforma}</p>
-                <button onclick="borrarForo(this)">Borrar</button>
             `;
 
             document.getElementById("foros").appendChild(nuevoForo);
@@ -90,19 +88,6 @@ function cargarForosDesdeCookies() {
 }
 
 cargarForosDesdeCookies();
-
-function borrarForo(botonBorrar) {
-    var confirmacion = confirm("¿Estás seguro de que quieres borrar este foro?");
-
-    if (confirmacion) {
-        var foro = botonBorrar.parentElement;
-        foro.remove();
-
-        eliminarCookie(foro);
-
-        mostrarMensajeExito("Foro borrado correctamente.");
-    }
-}
 
 function actualizarCookie(foro) {
     var titulo = foro.querySelector("h2").innerText;
