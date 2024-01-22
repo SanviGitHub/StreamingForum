@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foro de Streaming</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:wght@600&family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Recursive:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <h1>🎬 Foro de Streaming 🍿</h1>
+    </header>
+
+    <section id="nuevoForo">
+        <h2>Crea un Nuevo Foro</h2>
+        <form id="formularioForo">
+            <div id="anuncioSinTags" class="anuncio-borroso">
+                <p>Por favor, ingresa al menos un tag para crear un foro.</p>
+            </div>
+    
+            <div class="input-group">
+                <label for="titulo">Título:</label>
+                <input type="text" id="titulo" name="titulo" required>
+            </div>
+    
+            <div class="input-group">
+                <label for="cabeza">Texto:</label>
+                <textarea id="cabeza" name="cabeza" rows="4" required></textarea>
+            </div>
+    
+            <div class="input-group">
+                <label for="tags">Tags (separados por comas):</label>
+                <input type="text" id="tags" name="tags" required>
+            </div>
+    
+            <div class="input-group">
+                <label for="plataforma">Plataforma de Streaming:</label>
+                <select id="plataforma" name="plataforma" required>
+                    <option value="Netflix">Netflix</option>
+                    <option value="Disney+">Disney+</option>
+                    <option value="Star+">Star+</option>
+                    <option value="HBO Max">HBO Max</option>
+                </select>
+            </div>
+    
+            <button type="button" onclick="crearForo()">Crear Foro</button>
+        </form>
+    </section>
+
+    <hr>
+
+    <section id="foros">
+    </section>
+
+    <footer>
+        <p>&copy; 2023-2024 SanviGithub - No Open Code</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
